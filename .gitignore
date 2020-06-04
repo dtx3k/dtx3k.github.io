@@ -1,0 +1,28 @@
+
+*.code-workspace
+.vscode
+
+### Hugo ###
+# gitginore template for Hugo projects
+# website: https://gohugo.io
+
+# generated files by hugo
+/public/
+/resources/_gen/
+
+# executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
