@@ -1,0 +1,11 @@
+kind: pipeline
+name: default
+
+steps:
+- name: build
+  image: plugins/hugo
+  settings:
+    hugo_version: 0.55
+    pull: always
+    url: https://dtx3k.github.io
+    validate: true
