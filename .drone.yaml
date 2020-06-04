@@ -9,3 +9,6 @@ steps:
     pull: always
     url: https://dtx3k.github.io
     validate: true
+
+- name: publish  
+  image: plugins/gh-pages
