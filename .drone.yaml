@@ -13,7 +13,7 @@ steps:
     validate: true
 
 
-- name: push commit
+- name: push_commit
   image: appleboy/drone-git-push
   settings:
     branch: master
