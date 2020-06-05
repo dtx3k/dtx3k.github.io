@@ -12,6 +12,6 @@ steps:
     url: https://dtx3k.github.io
     validate: true
 
-# - name: publish  
-#  image: plugins/gh-pages
+- name: publish  
+  image: plugins/gh-pages
 
