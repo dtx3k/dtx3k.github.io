@@ -6,10 +6,12 @@ steps:
 - name: build
   image: plugins/hugo
   settings:
-    hugo_version: 0.55
+    hugo_version: 0.71.1
+    extended: true
     pull: always
     url: https://dtx3k.github.io
     validate: true
 
 # - name: publish  
 #  image: plugins/gh-pages
+
