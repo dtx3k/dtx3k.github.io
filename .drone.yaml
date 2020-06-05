@@ -1,7 +1,7 @@
 ---
 kind: pipeline
 name: default
-
+# start pipe
 steps:
 - name: build
   image: plugins/hugo
