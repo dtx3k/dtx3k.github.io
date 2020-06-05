@@ -14,4 +14,7 @@ steps:
 
 - name: publish  
   image: plugins/gh-pages
+  settings:
+    upstream_name: dtx3k.github.io
+    pages_directory: /
 
