@@ -12,9 +12,11 @@ steps:
     url: https://dtx3k.github.io
     validate: true
 
-- name: publish  
-  image: plugins/gh-pages
-  settings:
-    upstream_name: dtx3k.github.io
-    pages_directory: /
 
+- name: push commit
+  image: appleboy/drone-git-push
+  settings:
+    branch: master
+    remote: git@github.com:dtx3k/dtx3k.github.io.git
+    force: false
+    commit: true
