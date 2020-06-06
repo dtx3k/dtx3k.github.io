@@ -18,5 +18,7 @@ steps:
   settings:
     branch: master
     remote: git@github.com:dtx3k/dtx3k.github.io.git
+    ssh_key:
+      from_secret: sshkey
     force: false
     commit: true
