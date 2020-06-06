@@ -20,5 +20,5 @@ steps:
     remote: git@github.com:dtx3k/dtx3k.github.io.git
     ssh_key:
       from_secret: sshkey
-    force: false
+    force: true
     commit: true
