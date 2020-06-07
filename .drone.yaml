@@ -13,13 +13,23 @@ steps:
     validate: true
 
 
-- name: push_commit
-  image: appleboy/drone-git-push:0.2.0-linux-amd64
+#- name: push_commit
+#  image: appleboy/drone-git-push:0.2.0-linux-amd64
+#  settings:
+#    branch: master
+#    remote: git@github.com:dtx3k/dtx3k.github.io.git
+#    ssh_key:
+#      from_secret: sshkey
+#    force: true
+#    commit: true
+#    path: public/
+- name: publish
+  image: gvacaliuc/drone-gh-pages
   settings:
-    branch: master
-    remote: git@github.com:dtx3k/dtx3k.github.io.git
-    ssh_key:
-      from_secret: sshkey
-    force: true
-    commit: true
-    path: public/
+    pages_directory: public
+    upstream_name: https://github.com/dtx3k/dtx3k.github.io.git
+    target_branch: master
+    force_push: true
+    username: dtx3k
+    password:
+      from_secret: gh_password
