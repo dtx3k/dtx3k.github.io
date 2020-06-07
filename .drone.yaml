@@ -1,0 +1,35 @@
+---
+kind: pipeline
+name: default
+# start pipe
+steps:
+- name: build
+  image: plugins/hugo
+  settings:
+    hugo_version: 0.71.1
+    extended: true
+    pull: always
+    url: https://dtx3k.github.io
+    validate: true
+
+
+- name: push_commit
+  image: appleboy/drone-git-push:0.2.0-linux-amd64
+  settings:
+    branch: master
+    remote: git@github.com:dtx3k/dtx3k.github.io.git
+    ssh_key:
+      from_secret: sshkey
+    force: true
+    commit: true
+    path: public/
+# name: publish
+# image: plugins/gh-pages
+# settings:
+#   pages_directory: public/
+#   upstream_name: https://github.com/dtx3k/dtx3k.github.io.git
+#   target_branch: master
+#   force: true
+#   username: dtx3k
+#   password:
+#     from_secret: gh_password
