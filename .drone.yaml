@@ -24,7 +24,7 @@ steps:
 #    commit: true
 #    path: public/
 - name: publish
-  image: gvacaliuc/drone-gh-pages
+  image: plugin/drone-gh-pages
   settings:
     pages_directory: public
     upstream_name: https://github.com/dtx3k/dtx3k.github.io.git
