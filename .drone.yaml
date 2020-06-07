@@ -24,7 +24,7 @@ steps:
 #    commit: true
 #    path: public/
 - name: publish
-  image: plugins/drone-gh-pages
+  image: gvacaliuc/drone-gh-pages
   settings:
     pages_directory: public
     target_branch: master
