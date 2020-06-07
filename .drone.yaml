@@ -22,3 +22,4 @@ steps:
       from_secret: sshkey
     force: true
     commit: true
+    path: public/
